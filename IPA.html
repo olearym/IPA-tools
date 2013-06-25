@@ -1,234 +1,231 @@
 <html>
-<head>
- 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src = "IPA.js"></script>
-<link href="IPA.css" rel = "stylesheet"></link>
-</head>
-<body>
-<table border = "1">
-<tr class = "row0">
-<td id = "col0"></td>
-<td id = "col1" colspan = "2">Bilablial</td>
-<td id = "col2" colspan = "2">Labiodental</td>
-<td id = "col3" colspan = "2">Dental</td>
-<td id = "col4" colspan = "2">Alveolar</td>
-<td id = "col5" colspan = "2">Postalveolar</td>
-<td id = "col6" colspan = "2">Retroflex</td>
-<td id = "col7" colspan = "2">Palatal</td>
-<td id = "col8" colspan = "2">Velar</td>
-<td id = "col9" colspan = "2">Uvular</td>
-<td id = "col10" colspan = "2">Pharyngeal</td>
-<td id = "col11" colspan = "2">Glottal</td>
-</tr>
-<tr class = "row1">
-<td id = "col0">Plosive</td>
- 
- 
-<!-- <audio id="player" src="http://upload.wikimedia.org/wikipedia/commons/5/51/Voiceless_bilabial_plosive.ogg"></audio>
-<div>
-<button onclick="document.getElementById('player').play()">P</button>
-</div> -->
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row2">
-<td id = "col0">Nasal</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row3">
-<td id = "col0">Trill</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row4">
-<td id = "col0">Tap or Flap</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row5">
-<td id = "col0">Fricative</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row6">
-<td id = "col0">Lateral Fricative</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row7">
-<td id = "col0">Approximant</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-<tr class = "row8">
-<td id = "col0">Lateral Approximant</td>
-<td id = "col1"></td>
-<td id = "col2"></td>
-<td id = "col3"></td>
-<td id = "col4"></td>
-<td id = "col5"></td>
-<td id = "col6"></td>
-<td id = "col7"></td>
-<td id = "col8"></td>
-<td id = "col9"></td>
-<td id = "col10"></td>
-<td id = "col11"></td>
-<td id = "col12"></td>
-<td id = "col13"></td>
-<td id = "col14"></td>
-<td id = "col15"></td>
-<td id = "col16"></td>
-<td id = "col17"></td>
-<td id = "col18"></td>
-<td id = "col19"></td>
-<td id = "col20"></td>
-<td id = "col21"></td>
-<td id = "col22"></td>
-</tr>
-</table>
-</body>
+	<head>
+		
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+		<script src = "IPA.js"></script>
+		<script src = "js/bootstrap.min.js"></script>
+		<link href = "css/bootstrap.css" rel = "stylesheet"></link>
+		<link href="IPA.css" rel = "stylesheet"></link>
+	</head>
+	<body>
+		<!-- <audio id="player"></audio><div><button id = "button#" onclick="document.getElementById('player').play()"></button></div> -->
+		<table border = "1">
+			<tr class = "row0">
+				<td id = "col0"></td>
+				<td id = "col1" colspan = "2">Bilablial</td>
+				<td id = "col2" colspan = "2">Labiodental</td>
+				<td id = "col3" colspan = "2">Dental</td>
+				<td id = "col4" colspan = "2">Alveolar</td>
+				<td id = "col5" colspan = "2">Postalveolar</td>
+				<td id = "col6" colspan = "2">Retroflex</td>
+				<td id = "col7" colspan = "2">Palatal</td>
+				<td id = "col8" colspan = "2">Velar</td>
+				<td id = "col9" colspan = "2">Uvular</td>
+				<td id = "col10" colspan = "2">Pharyngeal</td>
+				<td id = "col11" colspan = "2">Glottal</td>
+			</tr>
+			<tr class = "row1">
+				<td id = "col0">Plosive</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row2">
+				<td id = "col0">Nasal</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row3">
+				<td id = "col0">Trill</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row4">
+				<td id = "col0">Tap or Flap</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row5">
+				<td id = "col0">Fricative</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row6">
+				<td id = "col0">Lateral Fricative</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row7">
+				<td id = "col0">Approximant</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+			<tr class = "row8">
+				<td id = "col0">Lateral Approximant</td>
+				<td id = "col1"></td>
+				<td id = "col2"></td>
+				<td id = "col3"></td>
+				<td id = "col4"></td>
+				<td id = "col5"></td>
+				<td id = "col6"></td>
+				<td id = "col7"></td>
+				<td id = "col8"></td>
+				<td id = "col9"></td>
+				<td id = "col10"></td>
+				<td id = "col11"></td>
+				<td id = "col12"></td>
+				<td id = "col13"></td>
+				<td id = "col14"></td>
+				<td id = "col15"></td>
+				<td id = "col16"></td>
+				<td id = "col17"></td>
+				<td id = "col18"></td>
+				<td id = "col19"></td>
+				<td id = "col20"></td>
+				<td id = "col21"></td>
+				<td id = "col22"></td>
+			</tr>
+		</table>
+	</body>
 
 </html>

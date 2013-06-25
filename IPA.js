@@ -1,41 +1,3 @@
-//*************************************************************************************************//
-//******Code to get array of characters and links from http://en.wikipedia.org/wiki/Help:IPA******//
-// chars = [];
-// links = [];
-// $($('.wikitable')[0]).find('tr').map(function() {
-// 	links.push($(this).find('.audiolink').find('a').prop('href'));
-// })
-
-// $($('.wikitable')[0]).find('tr').map(function() {
-// 	chars.push($(this).find('big').prop('innerText'));
-// })
-
-// charsToLinks = {};
-// for (var i = 0; i < links.length; i++) {
-// 	if (!(chars[i] == undefined)) {
-
-// 		if (!(links[i] == undefined)) {
-// 			charsToLinks[chars[i]] = links[i];
-// 		} else {
-// 			charsToLinks[chars[i]] = "No link found";
-// 		}	
-// 	} 
-// }
-
-
-//  code for getting character codes from http://www.phon.ucl.ac.uk/home/wells/ipa-unicode.htm
-// chars = []
-// codes = []
-// charsToCodes = {}
-
-// $('.myTable').find('tr').map(function() {
-// 	cha = $($(this).find('td')[0]).text()[0]
-// 	code = '&#' + $($(this).find('td')[1]).text().substring(0,3)
-// 	if (!(cha == undefined)) {
-// 		charsToCodes[cha] = code
-// 	}
-// })
-
 charsToCodes = {"æ": "&#230",
 "ç": "&#231",
 "ð": "&#240",
@@ -225,7 +187,7 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ɾ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/a0/Alveolar_tap.ogg", "row": 4, "column": 8, "decCode": ""},
 {'char': "ʀ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/cb/Uvular_trill.ogg", "row": 3, "column": 18, "decCode": ""},
 {'char': "ʁ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/af/Voiced_uvular_fricative.ogg", "row": 5, "column": 18, "decCode": ""},
-{'char': "ʂ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b1/Voiceless_retroflex_sibilant.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʂ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b1/Voiceless_retroflex_sibilant.ogg", "row": 5, "column": 11, "decCode": ""},
 {'char': "ʃ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg", "row": 5, "column": 9, "decCode": ""},
 {'char': "ʄ", 'url': "http://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_palatal_implosive.ogg", "row": "", "column": "", "decCode": ""},
 {'char': "ʈ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b0/Voiceless_retroflex_stop.oga", "row": 1, "column": 11, "decCode": ""},
@@ -236,11 +198,11 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ʍ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/a7/Voiceless_labio-velar_fricative.ogg", "row": 5, "column": 15, "decCode": ""},
 {'char': "ʎ", 'url': "http://upload.wikimedia.org/wikipedia/commons/d/d9/Palatal_lateral_approximant.ogg", "row": 8, "column": 14, "decCode": ""},
 {'char': "ʏ", 'url': "http://upload.wikimedia.org/wikipedia/commons/e/e3/Near-close_near-front_rounded_vowel.ogg", "row": "", "column": "", "decCode": ""},
-{'char': "ʐ", 'url': "http://upload.wikimedia.org/wikipedia/commons/7/7f/Voiced_retroflex_sibilant.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʐ", 'url': "http://upload.wikimedia.org/wikipedia/commons/7/7f/Voiced_retroflex_sibilant.ogg", "row": 5, "column": 12, "decCode": ""},
 {'char': "ʑ", 'url': "http://upload.wikimedia.org/wikipedia/commons/1/15/Voiced_alveolo-palatal_sibilant.ogg", "row": "", "column": "", "decCode": ""},
 {'char': "ʒ", 'url': "http://upload.wikimedia.org/wikipedia/commons/3/30/Voiced_palato-alveolar_sibilant.ogg", "row": 5, "column": 10, "decCode": ""},
 {'char': "ʔ", 'url': "http://upload.wikimedia.org/wikipedia/commons/4/4d/Glottal_stop.ogg", "row": 1, "column": 21, "decCode": ""},
-{'char': "ʕ", 'url': "http://upload.wikimedia.org/wikipedia/en/0/0c/Voiced_pharyngeal_fricative1.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʕ", 'url': "http://upload.wikimedia.org/wikipedia/en/0/0c/Voiced_pharyngeal_fricative1.ogg", "row": 5, "column": 20, "decCode": ""},
 {'char': "ʙ", 'url': "http://upload.wikimedia.org/wikipedia/commons/e/e7/Bilabial_trill.ogg", "row": 3, "column": 2, "decCode": ""},
 {'char': "ʝ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/ac/Voiced_palatal_fricative.ogg", "row": 5, "column": 14, "decCode": ""},
 {'char': "ʰ", 'url': "No link found", "decCode": ""},
@@ -248,17 +210,18 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ʷ", 'url': "No link found", "decCode": ""},
 {'char': "β", 'url': "http://upload.wikimedia.org/wikipedia/commons/3/37/Voiced_bilabial_fricative.ogg", "row": 5, "column": 2, "decCode": ""},
 {'char': "θ", 'url': "http://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg", "row": 5, "column": 5, "decCode": ""},
-{'char': "χ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg", "row": 5, "column": 17, "decCode": ""}]
+{'char': "χ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg", "row": 5, "column": 17, "decCode": ""},
+{'char': "L", 'url': "http://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg", "row": 8, "column": 16, "decCode": "&#671"},
+{'char': "ⱱ", 'url': "https://upload.wikimedia.org/wikipedia/commons/2/2c/Labiodental_flap.ogg", "row": 4, "column": 4, "decCode": ""}]
 
 for ( var i = 0; i < charsToLinks.length; i++ ) {
 	cha = charsToLinks[i].char;
 	if (!(charsToCodes[cha] == undefined)) {
-		charsToLinks[i].decCode = charsToCodes[cha];
+	charsToLinks[i].decCode = charsToCodes[cha];
 	}
 }
-;
-var keys = [];
 
+var keys = [];
 for(var key in charsToLinks){
 	if(charsToLinks.hasOwnProperty(key)){
 		keys.push(key);
@@ -269,23 +232,89 @@ for(var key in charsToLinks){
 // Below we will add to the html the values of these rows and columns
 
 $(document).ready(function(){
+	for (var x = 1; x <= 8; x++){
+		for (var y = 1; y <= 22; y++){
+			var tempRow = x;
+			var tempCol = y;
+			var tempID = ".row" + tempRow + " " + "#col" + tempCol;
+			if (tempCol % 2 == 0){
+				$(tempID).css("border-left", "0px");
+			}else{
+				$(tempID).css("border-right", "0px");
+			}
+		}
+	}
 	for (var i = 0; i < keys.length; i++){
 		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
-			rowIndex = String(charsToLinks[i]["row"]);
-			colIndex = String(charsToLinks[i]["column"]);
+			var rowIndex = String(charsToLinks[i]["row"]);
+			var colIndex = String(charsToLinks[i]["column"]);
+			if (charsToLinks[i]["decCode"] != ""){
+				var label = charsToLinks[i]["decCode"];
+			} else {
+				var label = charsToLinks[i]["char"];
+			}
 			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
+			
+			/*if ($(identifier).html() === ""){
+				var audioID = "col"+colIndex+"row"+rowIndex;
+				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+'"'+audioID+'"'+').play()">'+label+'</button></div>');
+				$(identifier).html(audio);
+			}*/
 			if ($(identifier).html() === ""){
-				if (charsToLinks[i]["decCode"] != ""){
-					$(identifier).html(charsToLinks[i]["decCode"]);
-				}else{
-				 	$(identifier).html(charsToLinks[i]["char"]);
-				}
+				var audioID = "'"+"col"+colIndex+"row"+rowIndex+"'";
+				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+audioID+').play()">'+label+'</button></div>')
+				$(identifier).html(audio);
 			}
 		}
 	}
 });
 
 
+/*$(document).ready(function(){
+	console.log(keys.length)
+	console.log(charsToLinks.length)
+
+	
+
+	for (var i = 0; i < keys.length; i++){
+		console.log("iterated");
+		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
+			rowIndex = String(charsToLinks[i]["row"]);
+			console.log("rowIndex: " + rowIndex);
+			colIndex = String(charsToLinks[i]["column"]);
+
+			
 
 
 
+			console.log("colIndex: " + colIndex);
+			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
+			console.log("identifier: " + identifier);
+			var playerIdentifier = identifier + " " +  "#player";
+			var buttonIdentifier = identifier + " " + "div" + " " + "#button" + colIndex;
+
+			//console.log("buttonIdentifier: " + buttonIdentifier);
+			if ($(identifier).html() === ""){
+				var audioThing = '<audio id="player"></audio><div><button id = "button' + colIndex + '"' + " " + "onclick='document.getElementById('player').play()'></button></div>"
+				var audio = $(audioThing);
+				if (charsToLinks[i]["decCode"] != ""){
+					$(identifier).html(charsToLinks[i]["decCode"]);
+					//$(buttonIdentifier).attr('value', (charsToLinks[i]["decCode"]));
+					//$(identifier).html(audio);
+					
+					
+				}else{
+					//$(buttonIdentifier).attr('value', (charsToLinks[i]["char"]));
+					$(identifier).html(charsToLinks[i]["char"]);
+					//$(identifier).html(audio);
+					
+				}
+				
+			}
+			$(playerIdentifier).attr("src", function(){
+				return charsToLinks[i]['url'];
+			})
+
+		}			
+	}
+});*/

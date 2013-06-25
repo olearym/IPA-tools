@@ -217,7 +217,7 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 for ( var i = 0; i < charsToLinks.length; i++ ) {
 	cha = charsToLinks[i].char;
 	if (!(charsToCodes[cha] == undefined)) {
-	charsToLinks[i].decCode = charsToCodes[cha];
+		charsToLinks[i].decCode = charsToCodes[cha];
 	}
 }
 
@@ -232,6 +232,7 @@ for(var key in charsToLinks){
 // Below we will add to the html the values of these rows and columns
 
 $(document).ready(function(){
+
 	for (var x = 1; x <= 8; x++){
 		for (var y = 1; y <= 22; y++){
 			var tempRow = x;
@@ -246,8 +247,10 @@ $(document).ready(function(){
 	}
 	for (var i = 0; i < keys.length; i++){
 		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
+			
 			var rowIndex = String(charsToLinks[i]["row"]);
 			var colIndex = String(charsToLinks[i]["column"]);
+
 			if (charsToLinks[i]["decCode"] != ""){
 				var label = charsToLinks[i]["decCode"];
 			} else {
@@ -255,11 +258,6 @@ $(document).ready(function(){
 			}
 			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
 			
-			/*if ($(identifier).html() === ""){
-				var audioID = "col"+colIndex+"row"+rowIndex;
-				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+'"'+audioID+'"'+').play()">'+label+'</button></div>');
-				$(identifier).html(audio);
-			}*/
 			if ($(identifier).html() === ""){
 				var audioID = "'"+"col"+colIndex+"row"+rowIndex+"'";
 				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+audioID+').play()">'+label+'</button></div>')
@@ -267,54 +265,11 @@ $(document).ready(function(){
 			}
 		}
 	}
+
+	// ---------------- Hover Functions --------------------//
+	//$(".row0 #col1").popover()
+
+	
 });
 
 
-/*$(document).ready(function(){
-	console.log(keys.length)
-	console.log(charsToLinks.length)
-
-	
-
-	for (var i = 0; i < keys.length; i++){
-		console.log("iterated");
-		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
-			rowIndex = String(charsToLinks[i]["row"]);
-			console.log("rowIndex: " + rowIndex);
-			colIndex = String(charsToLinks[i]["column"]);
-
-			
-
-
-
-			console.log("colIndex: " + colIndex);
-			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
-			console.log("identifier: " + identifier);
-			var playerIdentifier = identifier + " " +  "#player";
-			var buttonIdentifier = identifier + " " + "div" + " " + "#button" + colIndex;
-
-			//console.log("buttonIdentifier: " + buttonIdentifier);
-			if ($(identifier).html() === ""){
-				var audioThing = '<audio id="player"></audio><div><button id = "button' + colIndex + '"' + " " + "onclick='document.getElementById('player').play()'></button></div>"
-				var audio = $(audioThing);
-				if (charsToLinks[i]["decCode"] != ""){
-					$(identifier).html(charsToLinks[i]["decCode"]);
-					//$(buttonIdentifier).attr('value', (charsToLinks[i]["decCode"]));
-					//$(identifier).html(audio);
-					
-					
-				}else{
-					//$(buttonIdentifier).attr('value', (charsToLinks[i]["char"]));
-					$(identifier).html(charsToLinks[i]["char"]);
-					//$(identifier).html(audio);
-					
-				}
-				
-			}
-			$(playerIdentifier).attr("src", function(){
-				return charsToLinks[i]['url'];
-			})
-
-		}			
-	}
-});*/

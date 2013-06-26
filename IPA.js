@@ -267,7 +267,26 @@ $(document).ready(function(){
 	}
 
 	// ---------------- Hover Functions --------------------//
-	//$(".row0 #col1").popover()
+	$(".row0 #col1").popover({trigger: "hover", placement: "bottom", content: "Articulated with both lips"});
+	$(".row0 #col2").popover({trigger: "hover", placement: "bottom", content: "Articulated with both lower lip and upper teeth"});
+	$(".row0 #col3").popover({trigger: "hover", placement: "bottom", content: "Articulated on or between the teeth"});
+	$(".row0 #col4").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue and the alveolar ridge"});
+	$(".row0 #col5").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue just behind the alveolar ridge"});
+	$(".row0 #col6").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue curling backwards"});
+	$(".row0 #col7").popover({trigger: "hover", placement: "bottom", content: "Articulated with the mid tongue at the hard palate"});
+	$(".row0 #col8").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue at the soft palate"});
+	$(".row0 #col9").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue at the uvula"});
+	$(".row0 #col10").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue and the pharynx"});
+	$(".row0 #col11").popover({trigger: "hover", placement: "bottom", content: "Articulated at the glottis (the vocal folds)"});
+
+	$(".row1 #col0").popover({trigger: "hover", placement: "right", content: "Complete obstruction followed by release"});
+	$(".row2 #col0").popover({trigger: "hover", placement: "right", content: "Complete obstruction of the air flow in the mouth but with the velum open so that air can escape from the nose producing a humming sound"});
+	$(".row3 #col0").popover({trigger: "hover", placement: "right", content: "Sound made by the rapid vibration of one articulator against another"});
+	$(".row4 #col0").popover({trigger: "hover", placement: "right", content: "Sound made using a brief but complete closure of the vocal tract"});
+	$(".row5 #col0").popover({trigger: "hover", placement: "right", content: "Sound made by narrowing the vocal tract enough to cause turbulent airflow"});
+	$(".row6 #col0").popover({trigger: "hover", placement: "right", content: "A fricative where the airflow is blocked centrally and escapes sideways"});
+	$(".row7 #col0").popover({trigger: "hover", placement: "right", content: "Sound made by narrowing the vocal tract, but not enough to cause turbulent airflow"});
+	$(".row8 #col0").popover({trigger: "hover", placement: "right", content: "An approximant where the airflow escapes sideways and is blocked centrally"});
 
 	
 });

@@ -35,7 +35,6 @@
 // 		charsToCodes[cha] = code
 // 	}
 // })
-
 charsToCodes = {"æ": "&#230",
 "ç": "&#231",
 "ð": "&#240",
@@ -225,7 +224,7 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ɾ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/a0/Alveolar_tap.ogg", "row": 4, "column": 8, "decCode": ""},
 {'char': "ʀ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/cb/Uvular_trill.ogg", "row": 3, "column": 18, "decCode": ""},
 {'char': "ʁ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/af/Voiced_uvular_fricative.ogg", "row": 5, "column": 18, "decCode": ""},
-{'char': "ʂ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b1/Voiceless_retroflex_sibilant.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʂ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b1/Voiceless_retroflex_sibilant.ogg", "row": 5, "column": 11, "decCode": ""},
 {'char': "ʃ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/cc/Voiceless_palato-alveolar_sibilant.ogg", "row": 5, "column": 9, "decCode": ""},
 {'char': "ʄ", 'url': "http://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_palatal_implosive.ogg", "row": "", "column": "", "decCode": ""},
 {'char': "ʈ", 'url': "http://upload.wikimedia.org/wikipedia/commons/b/b0/Voiceless_retroflex_stop.oga", "row": 1, "column": 11, "decCode": ""},
@@ -236,11 +235,11 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ʍ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/a7/Voiceless_labio-velar_fricative.ogg", "row": 5, "column": 15, "decCode": ""},
 {'char': "ʎ", 'url': "http://upload.wikimedia.org/wikipedia/commons/d/d9/Palatal_lateral_approximant.ogg", "row": 8, "column": 14, "decCode": ""},
 {'char': "ʏ", 'url': "http://upload.wikimedia.org/wikipedia/commons/e/e3/Near-close_near-front_rounded_vowel.ogg", "row": "", "column": "", "decCode": ""},
-{'char': "ʐ", 'url': "http://upload.wikimedia.org/wikipedia/commons/7/7f/Voiced_retroflex_sibilant.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʐ", 'url': "http://upload.wikimedia.org/wikipedia/commons/7/7f/Voiced_retroflex_sibilant.ogg", "row": 5, "column": 12, "decCode": ""},
 {'char': "ʑ", 'url': "http://upload.wikimedia.org/wikipedia/commons/1/15/Voiced_alveolo-palatal_sibilant.ogg", "row": "", "column": "", "decCode": ""},
 {'char': "ʒ", 'url': "http://upload.wikimedia.org/wikipedia/commons/3/30/Voiced_palato-alveolar_sibilant.ogg", "row": 5, "column": 10, "decCode": ""},
 {'char': "ʔ", 'url': "http://upload.wikimedia.org/wikipedia/commons/4/4d/Glottal_stop.ogg", "row": 1, "column": 21, "decCode": ""},
-{'char': "ʕ", 'url': "http://upload.wikimedia.org/wikipedia/en/0/0c/Voiced_pharyngeal_fricative1.ogg", "row": "", "column": "", "decCode": ""},
+{'char': "ʕ", 'url': "http://upload.wikimedia.org/wikipedia/en/0/0c/Voiced_pharyngeal_fricative1.ogg", "row": 5, "column": 20, "decCode": ""},
 {'char': "ʙ", 'url': "http://upload.wikimedia.org/wikipedia/commons/e/e7/Bilabial_trill.ogg", "row": 3, "column": 2, "decCode": ""},
 {'char': "ʝ", 'url': "http://upload.wikimedia.org/wikipedia/commons/a/ac/Voiced_palatal_fricative.ogg", "row": 5, "column": 14, "decCode": ""},
 {'char': "ʰ", 'url': "No link found", "decCode": ""},
@@ -248,7 +247,9 @@ charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/comm
 {'char': "ʷ", 'url': "No link found", "decCode": ""},
 {'char': "β", 'url': "http://upload.wikimedia.org/wikipedia/commons/3/37/Voiced_bilabial_fricative.ogg", "row": 5, "column": 2, "decCode": ""},
 {'char': "θ", 'url': "http://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg", "row": 5, "column": 5, "decCode": ""},
-{'char': "χ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg", "row": 5, "column": 17, "decCode": ""}]
+{'char': "χ", 'url': "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg", "row": 5, "column": 17, "decCode": ""},
+{'char': "L", 'url': "http://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg", "row": 8, "column": 16, "decCode": "&#671"},
+{'char': "ⱱ", 'url': "https://upload.wikimedia.org/wikipedia/commons/2/2c/Labiodental_flap.ogg", "row": 4, "column": 4, "decCode": ""}]
 
 for ( var i = 0; i < charsToLinks.length; i++ ) {
 	cha = charsToLinks[i].char;
@@ -256,9 +257,8 @@ for ( var i = 0; i < charsToLinks.length; i++ ) {
 		charsToLinks[i].decCode = charsToCodes[cha];
 	}
 }
-;
-var keys = [];
 
+var keys = [];
 for(var key in charsToLinks){
 	if(charsToLinks.hasOwnProperty(key)){
 		keys.push(key);
@@ -269,21 +269,79 @@ for(var key in charsToLinks){
 // Below we will add to the html the values of these rows and columns
 
 $(document).ready(function(){
-	for (var i = 0; i < keys.length; i++){
-		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
-			rowIndex = String(charsToLinks[i]["row"]);
-			colIndex = String(charsToLinks[i]["column"]);
-			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
-			if ($(identifier).html() === ""){
-				if (charsToLinks[i]["decCode"] != ""){
-					$(identifier).html(charsToLinks[i]["decCode"]);
-				}else{
-				 	$(identifier).html(charsToLinks[i]["char"]);
-				}
+
+	for (var x = 1; x <= 8; x++){
+		for (var y = 1; y <= 22; y++){
+			var tempRow = x;
+			var tempCol = y;
+			var tempID = ".row" + tempRow + " " + "#col" + tempCol;
+			if (tempCol % 2 == 0){
+				$(tempID).css("border-left", "0px");
+			}else{
+				$(tempID).css("border-right", "0px");
 			}
 		}
 	}
+	for (var i = 0; i < keys.length; i++){
+		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined){
+
+			var rowIndex = String(charsToLinks[i]["row"]);
+			var colIndex = String(charsToLinks[i]["column"]);
+
+			if (charsToLinks[i]["decCode"] != ""){
+				var label = charsToLinks[i]["decCode"];
+			} else {
+				var label = charsToLinks[i]["char"];
+			}
+			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
+
+			if ($(identifier).html() === ""){
+				var audioID = "'"+"col"+colIndex+"row"+rowIndex+"'";
+				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+audioID+').play()">'+label+'</button></div>')
+				$(identifier).html(audio);
+			}
+		}
+	}
+
+	// ---------------- Hover Functions --------------------//
+	$("tr .labels").on("mouseenter", function(){
+		target = $(this);
+		console.log(target);
+		target.css("background-color", "#96c4d3");
+		// target.css("color", "white");
+	})
+	$("tr .labels").on("mouseleave", function(){
+		target = $(this);
+		console.log(target);
+		target.css("background-color", "white");
+		target.css("color", "black");
+	})
+
+
+	$(".row0 #col1 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with both lips"});
+	$(".row0 #col2 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with both lower lip and upper teeth"});
+	$(".row0 #col3 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated on or between the teeth"});
+	$(".row0 #col4 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue and the alveolar ridge"});
+	$(".row0 #col5 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue just behind the alveolar ridge"});
+	$(".row0 #col6 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the tip of the tongue curling backwards"});
+	$(".row0 #col7 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the mid tongue at the hard palate"});
+	$(".row0 #col8 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue at the soft palate"});
+	$(".row0 #col9 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue at the uvula"});
+	$(".row0 #col10 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated with the back of the tongue and the pharynx"});
+	$(".row0 #col11 .desc").popover({trigger: "hover", placement: "bottom", content: "Articulated at the glottis (the vocal folds)"});
+
+	$(".row1 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Complete obstruction followed by release"});
+	$(".row2 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Complete obstruction of the air flow in the mouth but with the velum open so that air can escape from the nose producing a humming sound"});
+	$(".row3 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Sound made by the rapid vibration of one articulator against another"});
+	$(".row4 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Sound made using a brief but complete closure of the vocal tract"});
+	$(".row5 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Sound made by narrowing the vocal tract enough to cause turbulent airflow"});
+	$(".row6 #col0 .desc").popover({trigger: "hover", placement: "right", content: "A fricative where the airflow is blocked centrally and escapes sideways"});
+	$(".row7 #col0 .desc").popover({trigger: "hover", placement: "right", content: "Sound made by narrowing the vocal tract, but not enough to cause turbulent airflow"});
+	$(".row8 #col0 .desc").popover({trigger: "hover", placement: "right", content: "An approximant where the airflow escapes sideways and is blocked centrally"});
+
+
 });
+
 
 
 

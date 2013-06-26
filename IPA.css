@@ -2,17 +2,23 @@ body{
 	margin: 5px;
 }
 button{
-	width: 25px;
-	height: 20px;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	background-color: white;
-	border: 1px solid white;
+	
 }
 audio{
 	width: 40px;
 	height: 10px;
 	position: absolute;
 
+}
+.desc{
+	padding: 4px;
+}
+tr td div button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	background-color: white;
+	border: 1px solid white;
 }

@@ -1,0 +1,39 @@
+.widgetBG{
+	left: 50%;
+	margin-left: 25%;
+	height: 400px;
+	width: 50%;
+	background-color: #F9A022;
+	padding: 5px;
+	border-radius: 10px;
+}
+#submit{
+	width: 25%;
+	float: right;
+	height: 32px;
+
+}
+.IPAInput{
+	width: 75%;
+	float: left;
+	height: 30px;
+	border-radius: 5px;
+	border-width: 1px;
+	padding: 3px;
+}
+.IPAHeaderText{
+	text-align: center;
+	color: white;
+}
+.pro{
+	height: 30px;
+}
+
+.alert {
+	visibility: hidden;
+}
+
+.word {
+	height: 30px;
+}
+

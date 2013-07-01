@@ -255,6 +255,6 @@ var charsToSounds = {"a": "http://upload.wikimedia.org/wikipedia/commons/6/65/Op
 "θ": "http://upload.wikimedia.org/wikipedia/commons/8/80/Voiceless_dental_fricative.ogg",
 "χ": "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg"}
 
-
+var EnglishIPA = ["b", "d", "ð", "dʒ", "f", "ɡ", "h", "j", "k", "l", "m", "n", "ŋ", "θ", "p", "r", "s", "ʃ", "t", "v", "w", "z", "ʒ", "x", "ʔ", "ɑː", "ɒ", "æ", "ɛ", "ɪ", "iː", "ɔː", "ʊ", "uː", "ʌ", "ə", "ɨ", "ɵ", "ʉ", "i"]
 
 

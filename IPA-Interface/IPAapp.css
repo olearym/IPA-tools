@@ -61,3 +61,39 @@ audio{
 .IPAQuiz button {
 	margin: 3px;
 }
+
+.IPANonPulmonic button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+}
+.IPANonPulmonic {
+
+}
+.IPANonPulmonic .popover{
+	font-size: 8pt;
+}
+
+.IPANonPulmonic td{
+	text-align: center;
+}
+
+.IPAVowels button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+}
+
+.IPAVowels .popover {
+	font-size: 8pt;
+}

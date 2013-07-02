@@ -6,7 +6,7 @@
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="IPAdata.js"></script>
 	<script src="IPAconverter.js"></script>
-	<script src="IPA.js"></script>
+	<script src="IPAcharts.js"></script>
 	<script src="IPAquiz.js"></script>
 	<script src = "js/bootstrap.min.js"></script>
 	<link href = "css/bootstrap.css" rel = "stylesheet"></link>
@@ -14,10 +14,29 @@
 </head>
 <body style="padding-top: 60px;">
 	<div class="container" id='main'>
+		<!-- Modal -->
+		<div id="about" class="modal hide fade">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Modal header</h3>
+		  </div>
+		  <div class="modal-body">
+		    <h3>One fine body…</h3>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn">Close</a>
+		    <a href="#" class="btn btn-primary">Save changes</a>
+		  </div>
+		</div>
+		<!-- End Modal -->
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container-fluid">
 					<a class="brand" href="#">IPA Learning Tool</a>
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about" data-toggle="modal">About</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -26,12 +45,26 @@
 				<div class="IPAConverter"></div>
 			</div>
 			<div class="span9">
-				<div class="row">
-					<div class="span12" style="height:100px;"></div>
-				</div>
-					<div class="IPAPulmonic"></div>
+				<div class = "tabbable">
+					<ul class = "nav nav-tabs">
+					<li id = "NPCTab" class = "active"><a href = "#tab1" data-toggle="tab">Pulmonic Consanants</a></li>
+					<li id = "PCTab"><a href = "#tab2" data-toggle="tab">Non-Pulmonic Consanants</a></li>
+					<li id = "NounTab"><a href = "#tab3" data-toggle="tab">Vowels</a></li>
+					</ul>
+					<div class = "tab-content">
+						<div class = "tab-pane active" id="tab1">
+							<div class="IPAPulmonic"></div>
+						</div>
+						<div class  = "tab-pane" id = "tab2">
+							<div class = "IPANonPulmonic"></div>
+						</div>
+						<div class = "tab-pane" id = "tab3">
+							<div class = "IPAVowels"></div>
+						</div>
+					</div>
 				</div>
 			</div>
+		</div>			
 		<div class="row">
 			<div class="span12">
 				<div class="IPAQuiz"></div>

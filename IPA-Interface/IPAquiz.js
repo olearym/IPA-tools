@@ -1,17 +1,14 @@
 var IPAQuiz = (function() {
 
 	var output ={};
-	
-	// Create list of characters and choose one randomly
-	var chars = [];
-	for(var key in charsToCodes){
-		if(charsToCodes.hasOwnProperty(key)){
-			chars.push(key);
-		}
-	}
 
-	var quizCharacter = chars[Math.floor(Math.random()*chars.length)];
+	// quizCharacter is a randomly selected character from the English IPA. The user will give a 
+	// word that they think contains this symbol.
+	var quizCharacter = EnglishIPA[Math.floor(Math.random()*EnglishIPA.length)];
 
+	// checkAnswer checks with the Merriam-Webster Learner's Dictionary API to see if the user's
+	// input contains the quizCharacter, then fills the feedback div with a message displaying
+	// whether or not they are correct.
 	var checkAnswer = function() {
 		
 		var answer = $('.wordInput').val();
@@ -32,7 +29,11 @@ var IPAQuiz = (function() {
 
 		  		// access pronunciation and check if quizCharacter is in it
 		    	var pro = xmlDoc.getElementsByTagName("pr")[0].childNodes[0].nodeValue;
+		    	if (pro.indexOf(':') !== -1) {
+		    		pro = pro.replace(':', 'ː');
+		    	}
 
+		    	// check if the input word contains the quizCharacter
 		   		if (pro.indexOf(quizCharacter) !== -1) {
 		   			$('.feedback').html('<div class="alert alert-success">Yes! The word '+answer+' contains this sound.</div>')
 		   		} else {
@@ -44,10 +45,12 @@ var IPAQuiz = (function() {
 
 	}
 
+
+	// sets up the html layout of the quiz module within the specified div and attaches click handlers to the buttons.
 	var setup = function(div) {
 
 		var header = $('<legend class = "IPAHeaderText">IPA Quiz</legend>');
-		var character = $('<div><h3 class="sound">Sound: '+charsToCodes[quizCharacter]+'</h3></div>');
+		var character = $('<div><h3 class="sound">Sound: '+quizCharacter+'</h3></div>');
 		var order = "document.getElementById('charSound').play()"
 		var playCharacter = $('<div class="play"><audio id="charSound" src='+charsToSounds[quizCharacter]+'></audio><div><button id = "button" class= "btn btn-info" onclick='+order+'>Play Sound</button></div></div>')
 		var wordBox = $('<input class = "wordInput" placeholder = "Input word here"></input>');
@@ -59,12 +62,15 @@ var IPAQuiz = (function() {
 
 		div.append(header, character, playCharacter, wordBox, button, feedback);
 
+
+		// The newChar button resets the quizCharacter when clicked.
 		$('#new').on('click', function() {
-			quizCharacter = chars[Math.floor(Math.random()*chars.length)];
-			$('.sound').html("Sound: "+charsToCodes[quizCharacter])
+			quizCharacter = EnglishIPA[Math.floor(Math.random()*EnglishIPA.length)];
+			$('.sound').html("Sound: "+quizCharacter)
 			$('.play').html('<audio id="charSound" src='+charsToSounds[quizCharacter]+'></audio><div><button id = "button" class= "btn btn-info" onclick='+order+'>Play Sound</button></div>')
 		})
 
+		// The submit button calls checkAnswer when clicked.
 		$('#submit-btn').on('click', checkAnswer);
 		$('.wordInput').keydown(function(event){
 			if(event.keyCode == 13) {

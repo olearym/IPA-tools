@@ -2,6 +2,8 @@ var IPAQuiz = (function() {
 
 	var output ={};
 
+	var server = "http://ipaserver.herokuapp.com/"
+
 	// quizCharacter is a randomly selected character from the English IPA. The user will give a 
 	// word that they think contains this symbol.
 	var quizCharacter = EnglishIPA[Math.floor(Math.random()*EnglishIPA.length)];
@@ -21,7 +23,7 @@ var IPAQuiz = (function() {
 			
 			 $.ajax({
 	            async: true,
-	            url: "http://localhost:8080/",
+	            url: server,
 	            data: { word: answer }
 	   		}).done(function(msg) {
 		    	var parser = new DOMParser();

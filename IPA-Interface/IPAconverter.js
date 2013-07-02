@@ -2,6 +2,8 @@ var IPAConverter = (function() {
 
 	var exports = {};
 
+	var server = "http://ipaserver.herokuapp.com/"
+
 	var submit = function() {
 
 		var query = $('.IPAInput').val();
@@ -21,7 +23,7 @@ var IPAConverter = (function() {
 			// Send request to dictionary API and extract data from returned XML string
 			 $.ajax({
 	            async: true,
-	            url: "http://localhost:8080/",
+	            url: server,
 	            data: { word: query }
 	   		}).done(function(msg) {
 

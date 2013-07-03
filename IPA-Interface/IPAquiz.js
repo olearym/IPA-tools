@@ -14,7 +14,9 @@ var IPAQuiz = (function() {
 	var checkAnswer = function() {
 		
 		var answer = $('.wordInput').val();
-
+		if ($('.sound').html().indexOf(' ') == -1){
+			quizCharacter = $('.sound').html()[$('.sound').html().length-1]
+		}
 		if (answer == '') {
 
 			$('.feedback').html('<div class="alert alert-error">Please enter a word.</div>')

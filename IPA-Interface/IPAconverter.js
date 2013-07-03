@@ -7,19 +7,20 @@ var IPAConverter = (function() {
 	var submit = function() {
 
 		var query = $('.IPAInput').val();
-		
+
 		if (query == '') {
-			
+
 			// Clear all output fields and ask user for a query
+			$('.alert').html("Please enter a query");
 			$('.alert').css('visibility', 'visible');
 			$('.audio').html('');
 			$('.pro').html('');
 			$('.word').html('');
-		
-		} else {
 
+
+		} else {
 			$('.alert').css('visibility', 'hidden');
-			
+
 			// Send request to dictionary API and extract data from returned XML string
 			 $.ajax({
 	            async: true,
@@ -30,8 +31,13 @@ var IPAConverter = (function() {
 	   			// parse returned string into XML DOM object
 		    	var parser = new DOMParser();
 		    	var xmlDoc = parser.parseFromString(msg, "text/xml");
+		    	console.log(xmlDoc)
 
 		    	// access sound files and get correct URL
+		    	if (xmlDoc.getElementsByTagName("wav")[0] === undefined){
+		    		$('.alert').html("Input not found");
+		    		$('.alert').css('visibility', 'visible');
+		    	} else {
 		    	var wav = xmlDoc.getElementsByTagName("wav")[0].childNodes[0].nodeValue;
 		    	var wavURL = "http://media.merriam-webster.com/soundc11/";
 		    	if (wav.substring(0,3) == 'bix') {
@@ -49,6 +55,8 @@ var IPAConverter = (function() {
 
 		  		// access pronunciation
 		    	var pro = xmlDoc.getElementsByTagName("pr")[0].childNodes[0].nodeValue;
+		    		
+
 		    	if (pro.indexOf(':') !== -1) {
 		    		pro = pro.replace(':', 'ː');
 		    	}
@@ -81,10 +89,9 @@ var IPAConverter = (function() {
 		    		var sound = $('<audio id='+id+' src='+charsToSounds[$(this).html()]+'></audio>');
 		    		$(this).append(sound);
 		    		$(this).on('mouseenter', function() {
-					    console.log("this.html: " + String($(this).html()));
+		    			$(this).css('cursor', 'pointer');
 					    var textHTML = String($(this).html());
 					    var letter = textHTML.charAt(0);
-					    console.log("letter: " + letter);
 
 					    for(var r = 1; r <= 8; r++){ // Looking through IPAPulmonic
 						    for(var c = 1; c <= 22; c++){
@@ -100,7 +107,7 @@ var IPAConverter = (function() {
 									    $(".tabbable #PCTab").addClass('active');
 									    $(".tabbable .tab-content #tab1").addClass('active');
 							    }
-							   
+
 							    if(c % 2 !== 0){
 								    var colLabelNum = ((c+1)/2);
 								    var colLabel = $(".IPAPulmonic table" + " " + ".row0" + " " + "#col" + colLabelNum + " " + ".desc");
@@ -115,19 +122,16 @@ var IPAConverter = (function() {
 								    colLabel.popover("show");
 								    rowLabel.popover("show");
 							    }
-							    console.log("Letter found");
 							    identifierP.css("color", "white");
 							    identifierP.css("background-color", "black");
 							    //rowColIdP.css("background-color", "light-blue");
 
 							    break;
 							    }else{
-							   
-							    	console.log("IdentifierP.html(): " + identifierP.html());
+
 							    }
 						    }
 
-						    console.log("Letter not found in Pulmonic Table");
 					    }
 
 					    for(var r = 1; r <= 5; r++){ // Looking through IPANonPulmonic
@@ -144,22 +148,19 @@ var IPAConverter = (function() {
 									    $(".tabbable #NPCTab").addClass('active');
 									    $(".tabbable .tab-content #tab2").addClass('active');
 							    }
-							   
+
 							    var colLabel = $(".IPANonPulmonic table" + " " + ".np-row0" + " " + "#np-col" + c);
 							    colLabel.popover("show")
-							    console.log("Letter found");
 							    identifierNP.css("color", "white");
 							    identifierNP.css("background-color", "black");
 							    //rowColIdNP.css("background-color", "light-blue");
 
 							    break;
 							    }else{
-							   
-							    console.log("IdentifierNP.html(): " + identifierNP.html());
+
 							    }
 						    }
 
-						    console.log("Letter not found in Pulmonic Table");
 					    }
 
 					    for(var r = 1; r <= 7; r++){ // Looking through IPAVowels ***Unfinished***
@@ -209,7 +210,6 @@ var IPAConverter = (function() {
 							    rowLabel.popover("show");
 						    }
 						    if (r == 5){ // Row 5
-							    console.log("letter found in row 5");
 							    if (c <= 12){
 								    var c = c-2;
 								    if (c == 5){
@@ -246,19 +246,16 @@ var IPAConverter = (function() {
 							    rowLabel.popover("show");
 						    }
 
-						    console.log("Letter found");
 						    identifierV.css("color", "white");
 						    identifierV.css("background-color", "black");
 						    //rowColIdP.css("background-color", "light-blue");
 
 						    break;
 					    }else{
-					   
-					    console.log("IdentifierP.html(): " + identifierP.html());
+
 					    }
 					    }
 
-					    console.log("Letter not found in Pulmonic Table");
 					    }
 
 					    //document.getElementById(id).play();
@@ -295,15 +292,14 @@ var IPAConverter = (function() {
 										    colLabel.popover("hide");
 										    rowLabel.popover("hide");
 									    }
-									   
+
 									    identifierP.css("color", "black");
 									    identifierP.css("background-color", "white");
 									    //rowColIdP.css("background-color", "light-blue");
-									   
+
 									    break;
 								    }else{
-								   
-								    console.log("IdentifierP.html(): " + identifierP.html());
+
 								    }
 							    }
 						    }
@@ -348,7 +344,6 @@ var IPAConverter = (function() {
 										    rowLabel.popover("hide");
 									    }
 									    if (r == 5){ // Row 5
-									    	console.log("letter found in row 5");
 									    if (c <= 12){
 									    	var c = c-2;
 									    if (c == 5){
@@ -384,19 +379,16 @@ var IPAConverter = (function() {
 										    colLabel.popover("hide");
 										    rowLabel.popover("hide");
 									    }
-									    console.log("Letter found");
 									    identifierV.css("color", "black");
 									    identifierV.css("background-color", "white");
 									    //rowColIdP.css("background-color", "light-blue");
 
 									    break;
 								    }else{
-								   
-								    console.log("IdentifierP.html(): " + identifierP.html());
+
 								    }
 							    }
 
-						    console.log("Letter not found in Pulmonic Table");
 						    }
 					    });
 			    		$(this).on('click', function() {
@@ -408,6 +400,7 @@ var IPAConverter = (function() {
 
 			    		n += 1;
 		    	})
+				}
 		    });
 		}
 
@@ -419,7 +412,7 @@ var IPAConverter = (function() {
 		// HTML layout of widget
 		var header = $('<legend class = "IPAHeaderText">IPA Converter</legend>');
 		var alert = $('<div class="alert alert-error">Please enter a query.</div>');
-		var input = $('<div><input class = "IPAInput" placeholder = "Input word here"></input>');
+		var input = $('<div><input class = "IPAInput" placeholder = "Input word here""></input>');
 		var button = $('<button id = "submit" class = "btn btn-success">Submit</button></div>');
 		var IPA = $('<div><h3>Pronunciation:</h3></div><div><h4 class = "pro"></h4></div>');
 		var word = $('<div><h3 style="text-align:left;">Word:</h3></div><div><h4 class = "word"></h4></div>');

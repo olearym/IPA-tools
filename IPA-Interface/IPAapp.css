@@ -97,3 +97,10 @@ audio{
 .IPAVowels .popover {
 	font-size: 8pt;
 }
+
+.modalImg{
+border: 3px solid lightgrey;
+border-radius: 3px;
+}
+
+

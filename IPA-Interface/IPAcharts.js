@@ -326,7 +326,7 @@ $(document).ready(function(){
 			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
 			 
 			if ($(identifier).html() === ""){
-			var audioID = "Vcol"+colIndex+"Vrow"+rowIndex;
+			var audioID = "col"+colIndex+"row"+rowIndex;
 			var order1 = 'document.getElementById("'+audioID+'").play()'
 			var order2 = "$('#IPAQuiz-Sound').html('Sound:"+label+"')"
 			var order3 = "$('#IPAQuiz-Play').empty()"

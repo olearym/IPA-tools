@@ -326,8 +326,11 @@ $(document).ready(function(){
 			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
 			 
 			if ($(identifier).html() === ""){
-			var audioID = "'"+"col"+colIndex+"row"+rowIndex+"'";
-			var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+audioID+').play()">'+label+'</button></div>')
+			var audioID = "Vcol"+colIndex+"Vrow"+rowIndex;
+			var order1 = 'document.getElementById("'+audioID+'").play()'
+			var order2 = "$('#IPAQuiz-Sound').html('Sound:"+label+"')"
+			var order3 = "$('#IPAQuiz-Play').empty()"
+			var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick='+order1+';'+order2+';'+order3+'>'+label+'</button></div>')
 			$(identifier).html(audio);
 			}
 		}
@@ -553,8 +556,11 @@ $(document).ready(function(){
 			var identifier = "#Vrow" + rowIndex + " " + "#Vcol" + colIndex;
 			 
 			if ($(identifier).html() === ""){
-				var audioID = "'"+"Vcol"+colIndex+"Vrow"+rowIndex+"'";
-				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick="document.getElementById('+audioID+').play()">'+label+'</button></div>')
+				var audioID = "Vcol"+colIndex+"Vrow"+rowIndex;
+				var order1 = 'document.getElementById("'+audioID+'").play()'
+				var order2 = "$('#IPAQuiz-Sound').html('Sound:"+label+"')"
+				var order3 = "$('#IPAQuiz-Play').empty()"
+				var audio = $('<audio id='+audioID+' src='+'"'+charsToLinks[i].url+'"'+'></audio><div><button onclick='+order1+';'+order2+';'+order3+'>'+label+'</button></div>')
 				$(identifier).html(audio);
 
 			}

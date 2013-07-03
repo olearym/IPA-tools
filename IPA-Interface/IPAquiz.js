@@ -52,9 +52,9 @@ var IPAQuiz = (function() {
 	var setup = function(div) {
 
 		var header = $('<legend class = "IPAHeaderText">IPA Quiz</legend>');
-		var character = $('<div><h3 class="sound">Sound: '+quizCharacter+'</h3></div>');
+		var character = $('<div><h3 class="sound" id="IPAQuiz-Sound">Sound: '+quizCharacter+'</h3></div>');
 		var order = "document.getElementById('charSound').play()"
-		var playCharacter = $('<div class="play"><audio id="charSound" src='+charsToSounds[quizCharacter]+'></audio><div><button id = "button" class= "btn btn-info" onclick='+order+'>Play Sound</button></div></div>')
+		var playCharacter = $('<div class="play" id="IPAQuiz-Play"><audio id="charSound" src='+charsToSounds[quizCharacter]+'></audio><div><button id = "button" class= "btn btn-info" onclick='+order+'>Play Sound</button></div></div>')
 		var wordBox = $('<input class = "wordInput" placeholder = "Input word here"></input>');
 		var button = $('<button id = "submit-btn" class = "btn btn-success">Submit</button>');
 		var feedback = $('<div class="feedback"></div>')
@@ -83,6 +83,7 @@ var IPAQuiz = (function() {
 	}
 
 	output.setup = setup;
+	output.quizCharacter = quizCharacter
 	return output
 })();
 

@@ -105,8 +105,8 @@ var IPAConverter = (function() {
 
 								    if (identifierP.html() == letter){
 									    if ($('.tabbable #PCTab').attr('class') != 'active'){
-										    $(".tabbable .active").removeClass('active');
-										    $(".tabbable .tab-content .active").removeClass('active');
+										    $("#chartTabs .active").removeClass('active');
+										    $("#chartTabs .tab-content .active").removeClass('active');
 										    $(".tabbable #PCTab").addClass('active');
 										    $(".tabbable .tab-content #tab1").addClass('active');
 								    }
@@ -146,8 +146,8 @@ var IPAConverter = (function() {
 
 								    if (identifierNP.html() == letter){
 									    if ($('.tabbable #NPCTab').attr('class') != 'active'){
-										    $(".tabbable .active").removeClass('active');
-										    $(".tabbable .tab-content .active").removeClass('active');
+										    $("#chartTabs .active").removeClass('active');
+										    $("#chartTabs .tab-content .active").removeClass('active');
 										    $(".tabbable #NPCTab").addClass('active');
 										    $(".tabbable .tab-content #tab2").addClass('active');
 								    }
@@ -175,8 +175,8 @@ var IPAConverter = (function() {
 
 						    if (identifierV.html() == letter){
 							    if ($('.tabbable #NounTab').attr('class') != 'active'){
-								    $(".tabbable .active").removeClass('active');
-								    $(".tabbable .tab-content .active").removeClass('active');
+								    $("#chartTabs .active").removeClass('active');
+								    $("#chartTabs .tab-content .active").removeClass('active');
 								    $(".tabbable #NounTab").addClass('active');
 								    $(".tabbable .tab-content #tab3").addClass('active');
 							    }

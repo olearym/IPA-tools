@@ -3,7 +3,7 @@ var IPAPulmonic = (function(){
 	var setupChart = function(div){
 		var table = $("<table class ='table table-hover table-bordered'></table>");
 
-		/*--------------Rows-------------*/
+	/*--------------Rows-------------*/
 
 		var row0 =  $("<tr class = 'row0'></tr>");
 		var row1 =  $("<tr class = 'row1'></tr>");
@@ -14,7 +14,7 @@ var IPAPulmonic = (function(){
 		var row6 =  $("<tr class = 'row6'></tr>");
 		var row7 =  $("<tr class = 'row7'></tr>");
 		var row8 =  $("<tr class = 'row8'></tr>");
-		/*--------------Row0 Columns---------------*/
+	/*--------------Row0 Columns---------------*/
 
 		var r0col0 = $("<td id = 'col0'></td>");
 		var r0col1 = $("<td class = 'labels' id = 'col1' colspan = '2'><div class = 'desc'>Bilabial</div></td>");
@@ -30,9 +30,7 @@ var IPAPulmonic = (function(){
 		var r0col11 = $("<td class = 'labels' id = 'col11' colspan = '2'><div class = 'desc'>Glottal</div></td>");
 
 		$(row0).append(r0col0, r0col1, r0col2, r0col3, r0col4, r0col5, r0col6, r0col7, r0col8, r0col9, r0col10, r0col11);
-
-
-		/*--------------Row1 Columns---------------*/
+	/*--------------Row1 Columns---------------*/
 
 		var r1col0 = $("<td id = 'col0'><div class = 'desc'>Plosive</div></td>");
 		var r1col1 = $("<td id = 'col1'></td>");
@@ -59,9 +57,7 @@ var IPAPulmonic = (function(){
 		var r1col22 = $("<td id = 'col22'></td>");
 
 		$(row1).append(r1col0, r1col1, r1col2, r1col3, r1col4, r1col5, r1col6, r1col7, r1col8, r1col9, r1col10, r1col11, r1col12, r1col13, r1col14, r1col15, r1col16, r1col17, r1col18, r1col19, r1col20, r1col21, r1col22);
-
-
-		/*--------------Row2 Columns---------------*/
+	/*--------------Row2 Columns---------------*/
 
 		var r2col0 = $("<td id = 'col0'><div class = 'desc'>Nasal</div></td>");
 		var r2col1 = $("<td id = 'col1'></td>");
@@ -88,9 +84,7 @@ var IPAPulmonic = (function(){
 		var r2col22 = $("<td id = 'col22'></td>");
 
 		$(row2).append(r2col0, r2col1, r2col2, r2col3, r2col4, r2col5, r2col6, r2col7, r2col8, r2col9, r2col10, r2col11, r2col12, r2col13, r2col14, r2col15, r2col16, r2col17, r2col18, r2col19, r2col20, r2col21, r2col22);
-
-
-		/*--------------Row3 Columns---------------*/
+	/*--------------Row3 Columns---------------*/
 
 		var r3col0 = $("<td id = 'col0'><div class = 'desc'>Trill</div></td>");
 		var r3col1 = $("<td id = 'col1'></td>");
@@ -117,9 +111,7 @@ var IPAPulmonic = (function(){
 		var r3col22 = $("<td id = 'col22'></td>");
 
 		$(row3).append(r3col0, r3col1, r3col2, r3col3, r3col4, r3col5, r3col6, r3col7, r3col8, r3col9, r3col10, r3col11, r3col12, r3col13, r3col14, r3col15, r3col16, r3col17, r3col18, r3col19, r3col20, r3col21, r3col22);
-
-
-		/*--------------Row4 Columns---------------*/
+	/*--------------Row4 Columns---------------*/
 
 		var r4col0 = $("<td id = 'col0'><div class = 'desc'>Tap or Flap</div></td>");
 		var r4col1 = $("<td id = 'col1'></td>");
@@ -146,9 +138,7 @@ var IPAPulmonic = (function(){
 		var r4col22 = $("<td id = 'col22'></td>");
 
 		$(row4).append(r4col0, r4col1, r4col2, r4col3, r4col4, r4col5, r4col6, r4col7, r4col8, r4col9, r4col10, r4col11, r4col12, r4col13, r4col14, r4col15, r4col16, r4col17, r4col18, r4col19, r4col20, r4col21, r4col22);
-
-
-		/*--------------Row5 Columns---------------*/
+	/*--------------Row5 Columns---------------*/
 
 		var r5col0 = $("<td id = 'col0'><div class = 'desc'>Fricative</div></td>");
 		var r5col1 = $("<td id = 'col1'></td>");
@@ -175,9 +165,7 @@ var IPAPulmonic = (function(){
 		var r5col22 = $("<td id = 'col22'></td>");
 
 		$(row5).append(r5col0, r5col1, r5col2, r5col3, r5col4, r5col5, r5col6, r5col7, r5col8, r5col9, r5col10, r5col11, r5col12, r5col13, r5col14, r5col15, r5col16, r5col17, r5col18, r5col19, r5col20, r5col21, r5col22);
-
-
-		/*--------------Row6 Columns---------------*/
+	/*--------------Row6 Columns---------------*/
 
 		var r6col0 = $("<td id = 'col0'><div class = 'desc'>Lateral Fricative</div></td>");
 		var r6col1 = $("<td id = 'col1'></td>");
@@ -204,9 +192,7 @@ var IPAPulmonic = (function(){
 		var r6col22 = $("<td id = 'col22'></td>");
 
 		$(row6).append(r6col0, r6col1, r6col2, r6col3, r6col4, r6col5, r6col6, r6col7, r6col8, r6col9, r6col10, r6col11, r6col12, r6col13, r6col14, r6col15, r6col16, r6col17, r6col18, r6col19, r6col20, r6col21, r6col22);
-
-
-		/*--------------Row7 Columns---------------*/
+	/*--------------Row7 Columns---------------*/
 
 		var r7col0 = $("<td id = 'col0'><div class = 'desc'>Approximant</div></td>");
 		var r7col1 = $("<td id = 'col1'></td>");
@@ -233,9 +219,7 @@ var IPAPulmonic = (function(){
 		var r7col22 = $("<td id = 'col22'></td>");
 
 		$(row7).append(r7col0, r7col1, r7col2, r7col3, r7col4, r7col5, r7col6, r7col7, r7col8, r7col9, r7col10, r7col11, r7col12, r7col13, r7col14, r7col15, r7col16, r7col17, r7col18, r7col19, r7col20, r7col21, r7col22);
-
-
-		/*--------------Row8 Columns---------------*/
+	/*--------------Row8 Columns---------------*/
 
 		var r8col0 = $("<td id = 'col0'><div class = 'desc'>Lateral Approximant</div></td>");
 		var r8col1 = $("<td id = 'col1'></td>");

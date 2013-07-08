@@ -43,7 +43,33 @@ audio{
 	background-color: white;
 	border: 1px solid white;
 }
-
+.IPANonPulmonic tr td button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+}
+.IPAVowels tr td div button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+}
+.IPAVowels{
+	width: 100%;
+	margin-top: 50px;
+}
+.Vcolumn{
+	width: 47px;
+}
 #main {
 	/*width: 90%;*/
 }
@@ -61,46 +87,7 @@ audio{
 .IPAQuiz button {
 	margin: 3px;
 }
-
-.IPANonPulmonic button{
-	width: 25px;
-	height: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	border-radius: 5px;
-	background-color: white;
-	border: 1px solid white;
-}
-.IPANonPulmonic {
-
-}
-.IPANonPulmonic .popover{
-	font-size: 8pt;
-}
-
-.IPANonPulmonic td{
-	text-align: center;
-}
-
-.IPAVowels button{
-	width: 25px;
-	height: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	border-radius: 5px;
-	background-color: white;
-	border: 1px solid white;
-}
-
-.IPAVowels .popover {
-	font-size: 8pt;
-}
-
 .modalImg{
-border: 3px solid lightgrey;
-border-radius: 3px;
+	border: 3px solid lightgrey;
+	border-radius: 3px;
 }
-
-

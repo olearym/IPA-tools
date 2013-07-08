@@ -10,7 +10,6 @@
 #submit{
 	width: 25%;
 	float: right;
-	height: 32px;
 
 }
 .IPAInput{
@@ -28,12 +27,3 @@
 .pro{
 	height: 30px;
 }
-
-.alert {
-	visibility: hidden;
-}
-
-.word {
-	height: 30px;
-}
-

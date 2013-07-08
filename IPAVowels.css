@@ -1,0 +1,13 @@
+.tableLabel{
+	text-align: center;
+}
+.IPAVowels button{
+	width: 25px;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid white;
+}

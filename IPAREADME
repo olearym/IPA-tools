@@ -1,0 +1,65 @@
+MITx Project 1
+==============
+
+IPA Learning Tools
+------------------
+
+###Introduction
+
+The IPA Learning Tools contain three modules for use in learning the 
+International Phonetic Alphabet. There is an interactive table of IPA
+symbols and sounds, a module which converts many common English words
+to their IPA representations, and a small quiz module for learning the
+IPA symbols and sounds present in the English language. Each module can
+be used as a standalone object.
+
+List of files:
+IPAapp.html
+IPAapp.css
+IPAdata.js
+IPAconverter.js
+IPAquiz.js
+IPAcharts.js
+IPAserver.js
+
+###Embedding Instructions
+
+All of the files are located in the IPA-Interface directory within the MITx-Project-1 repository.
+Go to that repository, and save all the files to a folder of your choice, just make sure you know 
+where.
+
+In order for any of these modules to work, they must connect with a server in order to recieve data about 
+the words that they are given.  You can start a server on your own computer to get this working.  
+
+To start a server:
+1. You must have node.js installed on your computer.
+2. Open up your command prompt, and within the cmd, direct yourself to the folder where you saved IPAserver.js saved.
+3. Once you are at that folder, type "node IPAserver.js", without quotation marks.
+4. You now have a server running on your machine, and will be able data from the external library
+
+To use any of the three modules, you need the IPAdata.js file. This contains
+information used by all of the modules to connect sound to the IPA characters and provides a list of 
+IPA characters to be used in the quiz module.
+The IPAdata.js file should be included in a script tag in the head of your HTML file before 
+any other IPA tool files.
+Make sure to also include the IPAapp.css file as a stylesheet in your HTML file.
+
+To embed the IPA tables:
+Each of the three available tables can be used separately.
+To place a table, create a div in your HTML file with one of the following
+classes: "IPAPulmonic", "IPANonPulmonic", "IPAVowels"
+In the head of your HTML file, add a script tag with the source being the path
+to IPAcharts.js. Make sure that the script tag for the IPAdata.js file
+is included in your HTML file and comes before the script tag for IPAcharts.js.
+
+To embed the IPA converter:
+In the head of your HTML file, add a script tag:
+script src="IPAconverter.js
+In the body of your document, place a div with the class "IPAConverter"
+wherever you want the IPA converter to be.
+
+To embed the IPA quiz:
+In the head of your HTML file, add a script tag:
+script src="IPAquiz.js
+In the body of your document, place a div with the class "IPAQuiz"
+wherever you want the quiz module to be.

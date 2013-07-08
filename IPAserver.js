@@ -5,12 +5,12 @@ var url = require('url'),
 
 
 
-var getXML = function(r) {
+var getXML = function(r, word) {
   var http = require('http');
 
   var options = {
       host: 'www.dictionaryapi.com',
-      path: '/api/v1/references/learners/xml/test?key=588b5e3b-251e-40e8-bdff-f465db5331c3',
+      path: '/api/v1/references/learners/xml/'+word+'?key=588b5e3b-251e-40e8-bdff-f465db5331c3',
       method: 'GET'
   };
 
@@ -42,7 +42,7 @@ my_http.createServer(function(request,response){
   response.writeHeader(200, {"Content-Type": "text/plain",
             'Access-Control-Allow-Origin':'*'
       });
-  getXML(response)
+  getXML(response, data.word)
 
   // response.write('Hello World');
   // response.end();

@@ -30,7 +30,7 @@ var IPAPulmonic = (function(){
 		var r0col11 = $("<td class = 'labels' id = 'col11' colspan = '2'><div class = 'desc'>Glottal</div></td>");
 
 		$(row0).append(r0col0, r0col1, r0col2, r0col3, r0col4, r0col5, r0col6, r0col7, r0col8, r0col9, r0col10, r0col11);
-		 
+
 
 		/*--------------Row1 Columns---------------*/
 
@@ -268,7 +268,7 @@ var IPAPulmonic = (function(){
 		$(table).append(row0, row1, row2, row3, row4, row5, row6, row7, row8);
 		$(div).append(table);
 		$(div).css("margin-top", "70px");
-		 
+
 	}
 	exports.setupChart = setupChart;
 	return exports;
@@ -314,7 +314,7 @@ $(document).ready(function(){
 	}
 	for (var i = 0; i < keysList.length; i++){
 		if (charsToLinks[i]["row"] !== undefined && charsToLinks[i]["column"] !== undefined) {
-		 
+
 			var rowIndex = String(charsToLinks[i]["row"]);
 			var colIndex = String(charsToLinks[i]["column"]);
 
@@ -324,7 +324,7 @@ $(document).ready(function(){
 				var label = charsToLinks[i]["char"];
 			}
 			var identifier = ".row" + rowIndex + " " + "#col" + colIndex;
-			 
+
 			if ($(identifier).html() === ""){
 			var audioID = "col"+colIndex+"row"+rowIndex;
 			var order1 = 'document.getElementById("'+audioID+'").play()'
@@ -340,7 +340,7 @@ $(document).ready(function(){
 	$("tr .labels").hover(function(){
 			target = $(this);
 			target.css("background-color", "#96c4d3");
-		
+
 		}, function(){
 			target = $(this);
 			target.css("background-color", "white");
@@ -367,7 +367,7 @@ $(document).ready(function(){
 	$(".row6 #col0 .desc").popover({trigger: "hover", animation: false, placement: "bottom", content: "A fricative where the airflow is blocked centrally and escapes sideways"});
 	$(".row7 #col0 .desc").popover({trigger: "hover", animation: false, placement: "bottom", content: "Sound made by narrowing the vocal tract, but not enough to cause turbulent airflow"});
 	$(".row8 #col0 .desc").popover({trigger: "hover", animation: false, placement: "bottom", content: "An approximant where the airflow escapes sideways and is blocked centrally"});
-	 
+
 });
 
 
@@ -382,11 +382,11 @@ var IPANonPulmonic = (function(){
 		var row3 = $("<tr class = 'np-row3'></tr>");
 		var row4 = $("<tr class = 'np-row4'></tr>");
 		var row5 = $("<tr class = 'np-row5'></tr>");
-		 
+
 		var r0col1 = $("<td class = 'labels' id = 'clicks'><div id = 'clicksDiv'>Clicks</div></td>");
 		var r0col2 = $("<td class = 'labels' id = 'voiced-implosives'><div id = 'voicedImplosivesDiv'>Voiced Implosives</div></td>");
 		var r0col3 = $("<td class = 'labels' id = 'ejectives'><div id = 'ejectivesDiv'>Ejectives</div></td>");
-		 
+
 		var r1col1 = $("<td id = 'np-col1'><audio id='bilabialClick' src='http://upload.wikimedia.org/wikipedia/commons/2/2b/Clic_bilabial_sourd.ogg'></audio><div><button id = 'button' >&#664</button></div>Bilabial</td>");
 		var r1col2 = $("<td id = 'np-col2'><audio id='bilabialImplosive' src='http://upload.wikimedia.org/wikipedia/commons/3/31/Voiced_bilabial_implosive.ogg'></audio><div><button id = 'button' onclick='document.getElementById('bilabialClick').play()'>&#595</button></div>Bilabial</td>");
 		var r1col3 = $("<td id = 'np-col3'><div><button id = 'button'>'</button></div>Examples:</td>");
@@ -432,7 +432,7 @@ $(document).ready(function(){
 	$ (".np-consonants #clicksDiv").popover({trigger: "hover", animation: false, placement: "top", content: "Clicks are made by creating a suction-like pressure in the mouth which is suddenly released, drawing air into the mouth.  The place of articulation is where the pressure/release occurs."});
 	$(".np-consonants #voicedImplosivesDiv").popover({trigger: "hover", animation: false, placement: "top", content: "Voiced implosives are made with an inward moving airstream which is formed by suction created by the downward movement of the larynx while another complete stop/obstruction is held further forward in the mouth."});
 	$(".np-consonants #ejectivesDiv").popover({trigger: "hover", animation: false, placement: "top", content: "Ejectives are made by squeezing air trapped between the glottis and closure that is further forward in the mouth, and releasing it suddenly or through a brief fricative-like action."});
-	 
+
 	$(".np-row1 #np-col1 button").on("click", function(){ document.getElementById("bilabialClick").play();});
 	$(".np-row1 #np-col2 button").on("click", function(){ document.getElementById("bilabialImplosive").play();});
 	//$(".np-row1 #np-col3 button").on("click", function(){ document.getElementById("bilabialClick").play();});
@@ -459,7 +459,44 @@ $(document).ready(function(){
 var IPAVowels = (function(){
 	var exports = {};
 	var setup = function(div){
-		var table = $("<table class = 'table table-hover table-bordered'></table>");
+		/*function DrawLine(x1, y1, x2, y2){
+
+		    if(y1 < y2){
+		        var pom = y1;
+		        y1 = y2;
+		        y2 = pom;
+		        pom = x1;
+		        x1 = x2;
+		        x2 = pom;
+		    }
+
+		    var a = Math.abs(x1-x2);
+		    var b = Math.abs(y1-y2);
+		    var c;
+		    var sx = (x1+x2)/2 ;
+		    var sy = (y1+y2)/2 ;
+		    var width = Math.sqrt(a*a + b*b ) ;
+		    var x = sx - width/2;
+		    var y = sy;
+
+		    a = width / 2;
+
+		    c = Math.abs(sx-x);
+
+		    b = Math.sqrt(Math.abs(x1-x)*Math.abs(x1-x)+Math.abs(y1-y)*Math.abs(y1-y) );
+
+		    var cosb = (b*b - a*a - c*c) / (2*a*c);
+		    var rad = Math.acos(cosb);
+		    var deg = (rad*180)/Math.PI
+
+		    htmlns = "http://www.w3.org/1999/xhtml";
+		    div = document.createElementNS(htmlns, "div");
+		    div.setAttribute('style','border:1px solid black;width:'+width+'px;height:0px;-moz-transform:rotate('+deg+'deg);-webkit-transform:rotate('+deg+'deg);position:absolute;top:'+y+'px;left:'+x+'px;');   
+
+		    document.getElementById("myElement").appendChild(div);
+
+		}*/
+		var table = $("<table class = 'table table-hover'></table>");
 
 		/*For the first row, we manually add the labels because they span multiple columns, and thus would not work with the for loop*/
 		var row0 = $("<tr id = 'Vrow0'></tr>");
@@ -476,6 +513,8 @@ var IPAVowels = (function(){
 		row0.append(emptyLabel1, frontLabel, nearFrontLabel, centralLabel, nearBackLabel, backLabel);
 		table.append(row0);
 
+		/*DrawLine(100, 100, 500, 500);*/
+
 		/*-------For loop adds columns to rows-------*/
 
 		for (var r = 1; r <= 7; r++){ // Adds rows and columns to table, initially with no content
@@ -487,7 +526,7 @@ var IPAVowels = (function(){
 				if (c == 0){
 					var newCol = $("<td class = 'tableLabel' id = 'Vcol" + c + "'></td>");
 					if (r == 1){
-						
+
 						newCol.append("<div class = 'desc'>Close</div>");
 					}else if (r == 2){
 						newCol.append("<div class = 'desc'>Near-Close</div>");
@@ -542,19 +581,19 @@ $(document).ready(function(){
 	for (var i = 0; i < keyList.length; i++){ // Adds content to the cells of the table
 
 		if (charsToLinks[i]["Vrow"] !== undefined && charsToLinks[i]["Vcolumn"] !== undefined){
-			
+
 			var rowIndex = String(charsToLinks[i]["Vrow"]);
 			var colIndex = String(charsToLinks[i]["Vcolumn"]);
 
 			if (charsToLinks[i]["VdecCode"] != ""/* || charsToLinks[i]["VdecCode"] !== undefined*/){
 				var label = charsToLinks[i]["VdecCode"];
-				
+
 			} else {
 				var label = charsToLinks[i]["char"];
-				
+
 			}
 			var identifier = "#Vrow" + rowIndex + " " + "#Vcol" + colIndex;
-			 
+
 			if ($(identifier).html() === ""){
 				var audioID = "Vcol"+colIndex+"Vrow"+rowIndex;
 				var order1 = 'document.getElementById("'+audioID+'").play()'

@@ -1,4 +1,4 @@
-var charsToCodes = {"•": "&#8226","ɘ": "&#600", "æ": "&#230", "ç": "&#231", "ð": "&#240", "ø": "&#248", "ħ": "&#295", "ŋ": "&#331", "œ": "&#339", "ǀ": "&#448", "ǁ": "&#449", "ǂ": "&#450", "ǃ": "&#451", "ɐ": "&#592", "ɑ": "&#593", "ɒ": "&#594", "ɓ": "&#595", "ɔ": "&#596", "ɕ": "&#597", "ɖ": "&#598", "ɗ": "&#599", "ɘ": "&#600", "ə": "&#601", "ɚ": "&#602", "ɛ": "&#603", "ɜ": "&#604", "ɝ": "&#605", "ɞ": "&#606", "ɟ": "&#607", "ɠ": "&#608", "ɡ": "&#609", "ɢ": "&#610", "ɣ": "&#611", "ɤ": "&#612", "ɥ": "&#613", "ɦ": "&#614", "ɧ": "&#615", "ɨ": "&#616", "ɪ": "&#618", "ɫ": "&#619", "ɬ": "&#620", "ɭ": "&#621", "ɮ": "&#622", "ɯ": "&#623", "ɰ": "&#624", "ɱ": "&#625", "ɲ": "&#626", "ɳ": "&#627", "ɴ": "&#628", "ɵ": "&#629", "ɶ": "&#630", "ɸ": "&#632", "ɹ": "&#633", "ɺ": "&#634", "ɻ": "&#635", "ɽ": "&#637", "ɾ": "&#638", "ʀ": "&#640", "ʁ": "&#641", "ʂ": "&#642", "ʃ": "&#643", "ʄ": "&#644", "ʈ": "&#648", "ʉ": "&#649", "ʊ": "&#650", "ʋ": "&#651", "ʌ": "&#652", "ʍ": "&#653", "ʎ": "&#654", "ʏ": "&#655", "ʐ": "&#656", "ʑ": "&#657", "ʒ": "&#658", "ʔ": "&#660", "ʕ": "&#661", "ʘ": "&#664", "ʙ": "&#665", "ʛ": "&#667", "ʜ": "&#668", "ʝ": "&#669", "ʟ": "&#671", "ʡ": "&#673", "ʢ": "&#674", "ʤ": "&#676", "ʧ": "&#679", "β": "&#946", "θ": "&#952", "χ": "&#967", "ⱱ": "&#113"}
+var charsToCodes = {"•": "&#8226","ɶ": "&#630", "ɘ": "&#600", "æ": "&#230", "ç": "&#231", "ð": "&#240", "ø": "&#248", "ħ": "&#295", "ŋ": "&#331", "œ": "&#339", "ǀ": "&#448", "ǁ": "&#449", "ǂ": "&#450", "ǃ": "&#451", "ɐ": "&#592", "ɑ": "&#593", "ɒ": "&#594", "ɓ": "&#595", "ɔ": "&#596", "ɕ": "&#597", "ɖ": "&#598", "ɗ": "&#599", "ɘ": "&#600", "ə": "&#601", "ɚ": "&#602", "ɛ": "&#603", "ɜ": "&#604", "ɝ": "&#605", "ɞ": "&#606", "ɟ": "&#607", "ɠ": "&#608", "ɡ": "&#609", "ɢ": "&#610", "ɣ": "&#611", "ɤ": "&#612", "ɥ": "&#613", "ɦ": "&#614", "ɧ": "&#615", "ɨ": "&#616", "ɪ": "&#618", "ɫ": "&#619", "ɬ": "&#620", "ɭ": "&#621", "ɮ": "&#622", "ɯ": "&#623", "ɰ": "&#624", "ɱ": "&#625", "ɲ": "&#626", "ɳ": "&#627", "ɴ": "&#628", "ɵ": "&#629", "ɶ": "&#630", "ɸ": "&#632", "ɹ": "&#633", "ɺ": "&#634", "ɻ": "&#635", "ɽ": "&#637", "ɾ": "&#638", "ʀ": "&#640", "ʁ": "&#641", "ʂ": "&#642", "ʃ": "&#643", "ʄ": "&#644", "ʈ": "&#648", "ʉ": "&#649", "ʊ": "&#650", "ʋ": "&#651", "ʌ": "&#652", "ʍ": "&#653", "ʎ": "&#654", "ʏ": "&#655", "ʐ": "&#656", "ʑ": "&#657", "ʒ": "&#658", "ʔ": "&#660", "ʕ": "&#661", "ʘ": "&#664", "ʙ": "&#665", "ʛ": "&#667", "ʜ": "&#668", "ʝ": "&#669", "ʟ": "&#671", "ʡ": "&#673", "ʢ": "&#674", "ʤ": "&#676", "ʧ": "&#679", "β": "&#946", "θ": "&#952", "χ": "&#967", "ⱱ": "&#113"}
 
 var charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/commons/6/65/Open_front_unrounded_vowel.ogg", "Vrow": 7, "Vcolumn": 7, "VdecCode": ""},
 {'char': "aː", 'url': "http://upload.wikimedia.org/wikipedia/commons/6/65/Open_front_unrounded_vowel.ogg", "Vrow": "", "Vcolumn": "", "VdecCode": ""},
@@ -128,6 +128,8 @@ var charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/
 {'char': "L", 'url': "http://upload.wikimedia.org/wikipedia/commons/d/d3/Velar_lateral_approximant.ogg", "row": 8, "column": 16, "decCode": "&#671"},
 {'char': "ⱱ", 'url': "https://upload.wikimedia.org/wikipedia/commons/2/2c/Labiodental_flap.ogg", "row": 4, "column": 4, "decCode": ""},
 {'char': "ɞ", 'url': "https://upload.wikimedia.org/wikipedia/commons/d/d9/Open-mid_central_rounded_vowel.ogg", "Vrow": 5, "Vcolumn": 11, "VdecCode": ""}, 
+{'char': "ɘ", 'url': "https://upload.wikimedia.org/wikipedia/commons/6/60/Close-mid_central_unrounded_vowel.ogg", 'Vrow': 3, 'Vcolumn': 8, 'decCode': ""},
+{'char': "ɶ", 'url': "https://upload.wikimedia.org/wikipedia/commons/c/c1/Open_front_rounded_vowel.ogg", "Vrow": 7, "Vcolumn": 9, "decCode": ""},
 {'char': "•", 'url': "No link found", "Vrow": 1, "Vcolumn": 2, "VdecCode": ""},
 {'char': "•", 'url': "No link found", "Vrow": 1, "Vcolumn": 8, "VdecCode": ""},
 {'char': "•", 'url': "No link found", "Vrow": 1, "Vcolumn": 14, "VdecCode": ""},
@@ -138,11 +140,12 @@ var charsToLinks = [{'char': "a", 'url': "http://upload.wikimedia.org/wikipedia/
 {'char': "•", 'url': "No link found", "Vrow": 5, "Vcolumn": 10, "VdecCode": ""},
 {'char': "•", 'url': "No link found", "Vrow": 5, "Vcolumn": 14, "VdecCode": ""},
 {'char': "•", 'url': "No link found", "Vrow": 7, "Vcolumn": 8, "VdecCode": ""},
-{'char': "•", 'url': "No link found", "Vrow": 7, "Vcolumn": 14, "VdecCode": ""},
-{'char': "ɘ", 'url': "https://upload.wikimedia.org/wikipedia/commons/6/60/Close-mid_central_unrounded_vowel.ogg", 'Vrow': 3, 'Vcolumn': 8, 'decCode': ""}]
+{'char': "•", 'url': "No link found", "Vrow": 7, "Vcolumn": 11, "VdecCode": ""},
+{'char': "•", 'url': "No link found", "Vrow": 7, "Vcolumn": 14, "VdecCode": ""},]
 
 
-var charsToSounds = {"a": "http://upload.wikimedia.org/wikipedia/commons/6/65/Open_front_unrounded_vowel.ogg",
+var charsToSounds = {"ʌ": "http://upload.wikimedia.org/wikipedia/commons/9/92/Open-mid_back_unrounded_vowel.ogg",
+"a": "http://upload.wikimedia.org/wikipedia/commons/6/65/Open_front_unrounded_vowel.ogg",
 "aː": "http://upload.wikimedia.org/wikipedia/commons/6/65/Open_front_unrounded_vowel.ogg",
 "b": "http://upload.wikimedia.org/wikipedia/commons/2/2c/Voiced_bilabial_plosive.ogg",
 "c": "http://upload.wikimedia.org/wikipedia/commons/5/5d/Voiceless_palatal_plosive.ogg",
@@ -250,7 +253,6 @@ var charsToSounds = {"a": "http://upload.wikimedia.org/wikipedia/commons/6/65/Op
 "ʉ": "http://upload.wikimedia.org/wikipedia/commons/6/66/Close_central_rounded_vowel.ogg",
 "ʊ": "http://upload.wikimedia.org/wikipedia/commons/d/d5/Near-close_near-back_rounded_vowel.ogg",
 "ʋ": "http://upload.wikimedia.org/wikipedia/commons/e/ee/Labiodental_approximant.ogg",
-"ʌ": "No link found",
 "ʍ": "http://upload.wikimedia.org/wikipedia/commons/a/a7/Voiceless_labio-velar_fricative.ogg",
 "ʎ": "http://upload.wikimedia.org/wikipedia/commons/d/d9/Palatal_lateral_approximant.ogg",
 "ʏ": "http://upload.wikimedia.org/wikipedia/commons/e/e3/Near-close_near-front_rounded_vowel.ogg",
@@ -269,16 +271,3 @@ var charsToSounds = {"a": "http://upload.wikimedia.org/wikipedia/commons/6/65/Op
 "χ": "http://upload.wikimedia.org/wikipedia/commons/c/c8/Voiceless_uvular_fricative.ogg"}
 
 var EnglishIPA = ["b", "d", "ð", "dʒ", "f", "ɡ", "h", "j", "k", "l", "m", "n", "ŋ", "θ", "p", "r", "s", "ʃ", "t", "v", "w", "z", "ʒ", "x", "ʔ", "ɑː", "ɒ", "æ", "ɛ", "ɪ", "iː", "ɔː", "ʊ", "uː", "ʌ", "ə", "ɨ", "ɵ", "ʉ", "i"]
-
-converterPresets = { "apple": [{ pro:"ˈæpəl", wavURL:"http://media.merriam-webster.com/soundc11/a/apple001.wav" }],
-"food": [{ pro:"ˈfuːd", wavURL:"http://media.merriam-webster.com/soundc11/f/food0001.wav" }],
-"queue": [{ pro:"ˈkjuː", wavURL:"http://media.merriam-webster.com/soundc11/q/queue001.wav" }],
-"chef": [{ pro:"ˈʃɛf", wavURL:"http://media.merriam-webster.com/soundc11/c/chef0001.wav" }],
-"snow": [{ pro:"ˈsnoʊ", wavURL:"http://media.merriam-webster.com/soundc11/s/snow0001.wav" }],
-}
-
-presetWords = ["apple", "food", "queue", "chef", "snow"]
-
-
-
-

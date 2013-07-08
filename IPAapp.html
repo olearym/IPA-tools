@@ -1,0 +1,286 @@
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>IPA Learning Tool</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src = "js/bootstrap.min.js"></script>
+	<link href = "css/bootstrap.css" rel = "stylesheet"></link>
+	<script src="IPAdata.js"></script>
+	<script src="IPAconverter.js"></script>
+	<script src="IPAcharts.js"></script>
+	<script src="IPAquiz.js"></script>
+	
+	<link href = "IPAapp.css" rel = "stylesheet"></link>
+</head>
+<body style="padding-top: 60px;">
+	<div class="container" id='main'>
+		<!-- Modal -->
+		<div id="about" class="modal hide fade">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>How to use the tools</h3>
+		  </div>
+		  <div class="modal-body">
+		    <h4>Below you'll find information as to what each of the widgets do, and how to use them.</h4>
+
+		    <div class = "tabbable">
+			    <ul class = "nav nav-tabs">
+			    	<li class = "active"><a href = "#modalTab1" data-toggle = "tab">IPA Converter</a></li>
+					<li><a href = "#modalTab2" data-toggle = "tab">Quiz</a></li>
+					<li><a href = "#modalTab3" data-toggle = "tab">IPA Charts</a></li>
+					<li><a href = "#modalTab4" data-toggle = "tab">Embedding</a></li>
+					<li><a href = "#modalTab5" data-toggle = "tab">Credits</a></li>
+			    </ul>
+			    <div class = "tab-content">
+
+			    	<div class = "tab-pane active" id = "modalTab1">
+			    		<p>To use the IPA Converter, start by inputing a word into the input box above the submit button.</p>
+
+			    		<img class = "modalImg" src = "images/inputBox.JPG"/>
+
+			    		<p>The IPA Converter will look through a dictionary to check if it has to IPA symbols associated with that word.  If it does, the converter will output the same word, but spelled with phonetic alphabet symbols.</p>
+
+			    		<img class = "modalImg" src = "images/Pronounciation.JPG"/>
+
+			    		<p>If you have the IPA charts on your page, when you hover over a symbol, the correct chart containing that symbol will automatically be displayed, and give helpful pop-ups that instruct you how to pronounce that symbol.</p>
+			    		<div>
+			    			<img class = "modalImg" style = "width: 46%" src = "images/ProHover.JPG"/>
+			    			<i class = "icon-arrow-right"></i>
+			    			<img class = "modalImg" src = "images/ProTableHover.JPG" style = "width: 46%"/>
+			    		</div>
+			    		<p>You can also click on the symbol you are hovering over to hear its pronounciation</p>
+			    	</div>
+
+			    	<div class = "tab-pane" id = "modalTab2">
+			    		<p>You can test you're understanding with the IPA Quiz.  Given a symbol, see if you can come up with a word that contains that symbol</p>
+
+			    		<p>The IPA Quiz works by pulling a random symbol from our dictionary, and displaying it next to the "Sound" label.  We made sure to only pull out symbols associated with the language you're learning</p>
+
+			    		<img class = "modalImg" src = "images/quizSound.JPG"/>
+
+			    		<p>Below the symbol you'll find two buttons, and an input field.  You can use the "New Sound" button to randomly select a new symbol.  When you're ready to guess, you can type in a word into the input field and press the "Submit" button</p>
+
+			    		<img class = "modalImg" src = "images/quizInput.JPG"/>
+
+			    		<p>If you need a hint, press the "Play Sound" button, to hear what the symbol sounds like</p>
+			    	</div>
+
+			    	<div class = "tab-pane" id = "modalTab3">
+
+			    		<p>Here you'll find descriptions of each of the charts, and how to take full advantage of their functionality</p>
+
+			    		<h4> All the charts share these key functionalities:</h4>
+			    			<ul>
+			    				<li>If you click on a symbol in the table, you can hear it's pronounciation</li>
+			    				<li>Hovering over the labels in any chart will give you a description of what that label means</li>
+
+			    			</ul>
+			    		<div class = "tabbable">
+			    			<ul class = "nav nav-pills">
+			    				<li class = "active">
+			    					<a href = "#pulmonicTab" data-toggle = "tab">
+			    						Pulmonic Consanants
+			    					</a>
+			    				</li>
+			    				<li>
+			    					<a href = "#nonPulmonicTab" data-toggle = "tab">
+			    						Non-Pulmonic Consanants
+			    					</a>
+			    				</li>
+			    				<li>
+			    					<a href = "#vowelsTab" data-toggle = "tab">
+			    						Vowels
+			    					</a>
+			    				</li>
+			    			</ul>
+			    			<div class = "tab-content">
+			    				<div class = "tab-pane active" id = "pulmonicTab">
+			    					<p>Below is what the Pulmonic consanants chart looks like:</p>
+			    					<img class = "modalImg" style = "width: 95%" src = "images/pulmonicTable.JPG"/>
+			    					<p>When you click on a symbol, aside from playing the sound of the symbol, you can get extra functionality if you have IPAquiz on the webpage</p>
+			    					<img class = "modalImg" src = "images/tableClick.JPG"/>
+			    					<i class = "icon-arrow-right"></i>
+			    					<img class = "modalImg" src = "images/clickToQuiz.JPG"/>
+			    					<p>Clicking on a symbol within the chart will change the symbol being guessed in the quiz.  This allows you to pick a symbol in the chart that you want to test yourself on</p>
+
+			    				</div>
+			    				<div class = "tab-pane" id = "nonPulmonicTab">
+			    					<p>Here is the Non Pulmonic consanants chart</p>
+			    					<img class = "modalImg" style = "width: 95%" src = "images/nonPulmonicTable.JPG"/>
+			    					<p>All the symbols here are not included in the English language, so clicking on a symbol does not change the quiz symbol</p>
+			    				</div>
+			    				<div class = "tab-pane" id = "vowelsTab">
+			    					<p>This is the chart of Vowels</p>
+			    					<img class = "modalImg" style = "width: 95%" src = "images/vowelTable.JPG"/>
+			    					<p>This chart works a little bit differently than the others</p>
+
+			    					<p>There are 3 main columns: "Front", "Central", and "Back".  Below each of these columns you will see a dot: "&#8226".  The dot below a dot in that respective column represents another pair of vowels within that column.  This may get confusing because the columns actually slant to the right as you go down, but just follow the dots and you'll know where everything belongs</p>
+
+			    					<img  class = "modalImg" style = "width: 95%" src = "images/VowelTableLines.JPG"/> 
+
+			    					<p>Next to every dot there will either be 1 or 2 symbols.  The symbol to the right is rounded, meaning you physically round your lips as you are pronouncing the symbol.  The symbol to the left is unrounded, so you can voice it without doing anything fancy.</p>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+
+			    	<div class = "tab-pane" id = "modalTab4">
+			    		<p>To embed any of these components into your own website, follow this link to our github repository:</p>
+
+			    		<a href = "https://github.com/olearym/MITx-Project-1/tree/master/IPA-Interface">https://github.com/olearym/MITx-Project-1/tree/master/IPA-Interface</a>
+			    		<p></p>
+			    		<p>Download all the files in the IPA-Interface folder to the same folder that you're storing your website on</p>
+
+			    		<p>Below you'll find instructions as what to insert at the head and body of your html</p>
+			    		<div class = "tabbable">
+			    			<ul class = "nav nav-pills">
+			    				<li class = "active"><a href = "#modalHead" data-toggle = "tab">Head</a></li>
+			    				<li><a href="#modalBody" data-toggle = "tab">Body</a></li>
+			    			</ul>
+			    			<div class = "tab-content">
+			    				<div class = "tab-pane active" id = "modalHead">
+			    					<p>Include these tags at the head of your html:</p>
+						    		<p>These script tags include all the files you need no matter what widget you are using on your webpage</p>
+						    				
+						    		<pre>
+&lt;META http-equiv="Content-Type" content="text/html; charset=utf-8" />
+&lt;script src="http://code.jquery.com/jquery-1.10.1.min.js">&lt;/script>
+&lt;script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js">&lt;/script>
+&lt;script src = "js/bootstrap.min.js">&lt;/script>
+&lt;link href = "css/bootstrap.css" rel = "stylesheet">&lt;/link>
+&lt;script src="IPAdata.js">&lt;/script>
+&lt;script src="IPAconverter.js">&lt;/script>
+&lt;script src="IPAcharts.js">&lt;/script>
+&lt;script src="IPAquiz.js">&lt;/script>
+						    		</pre>
+			    				</div>
+			    				<div class = "tab-pane" id = "modalBody">
+			    					<p>After you have the "META", "script", and "link" tags, you will need to define where each widget will go on you webpage:</p>
+					    			<li>
+					    				<p>To get the IPA Converter, insert this div into the html of your webpage:</p>
+					    				<pre>&lt;div class="IPAConverter">&lt;/div></pre>
+					    			</li>
+					    			<li>
+					    				<p>For the charts:</p>
+					    				<div class = "tabbable">
+					    					<ul class = "nav nav-pills">
+					    						<li class = "active"><a href = "#modalChart1" data-toggle = "tab">Seperate Charts</a></li>
+					    						<li><a href = "#modalChart2" data-toggle = "tab">Tabbed Charts</a></li>
+					    					</ul>
+					    					<div class = "tab-content">
+					    						<div class = "tab-pane active" id = "modalChart1">
+					    							<ul>
+								    					<li>
+								    						<p>Pulmonic Consanants:</p>
+								    						<pre>&lt;div class="IPAPulmonic">&lt;/div></pre>
+								    					</li>
+								    					<li>
+								    						<p>Non-Pulmonic Consanants:</p>
+								    						<pre>&lt;div class="IPANonPulmonic">&lt;/div></pre>
+								    					</li>
+								    					<li>
+								    						<p>Vowels:</p>
+								    						<pre>&lt;div class = "IPAVowels">&lt;/div></pre>
+								    					</li>
+								    				</ul>
+					    						</div>
+					    						<div class = "tab-pane" id = "modalChart2">
+					    							<p>To have the charts tabbed, you'll need to include much more html, but we decided to make it easy.  Simply copy and paste the html below where you want the tabbed charts in your code:</p>
+					    							<pre>
+&lt;div class = "tabbable">
+	&lt;ul class = "nav nav-tabs">
+	&lt;li id = "NPCTab" class = "active">&lt;a href = "#tab1" data-toggle="tab">Pulmonic Consanants&lt;/a>&lt;/li>
+	&lt;li id = "PCTab">&lt;a href = "#tab2" data-toggle="tab">Non-Pulmonic Consanants&lt;/a>&lt;/li>
+	&lt;li id = "NounTab">&lt;a href = "#tab3" data-toggle="tab">Vowels&lt;/a>&lt;/li>
+	&lt;/ul>
+	&lt;div class = "tab-content">
+		&lt;div class = "tab-pane active" id="tab1">
+			&lt;div class="IPAPulmonic">&lt;/div>
+			&lt;h5 style = "text-align: center">Within each column, consanants on the right are voiced&lt;/h5>
+		&lt;/div>
+		&lt;div class  = "tab-pane" id = "tab2">
+			&lt;div class = "IPANonPulmonic">&lt;/div>
+		&lt;/div>
+		&lt;div class = "tab-pane" id = "tab3">
+			&lt;div class = "IPAVowels">&lt;/div>
+			&lt;h5 style = "text-align: center">Where there is a "&#8226", the vowel to the right is rounded&lt;/h5>
+		&lt;/div>
+	&lt;/div>
+&lt;/div>
+					    							</pre>
+					    						</div>
+					    					</div>
+					    				</div>
+						    				
+
+					    			</li>
+					    			<li>
+					    				<p>For the Quiz:</p>
+					    				<pre>&lt;div class="IPAQuiz">&lt;/div></pre>
+					    			</li>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<div class = "tab-pane" id = "modalTab5">
+			    		<h4>Main Developers</h4>
+			    		<p>Megan O'leary and Daniel Sanchez</p>
+			    		<h4>Project Advisor</h4>
+			    		<p>Haoqi Zhang</p>
+			    	</div>
+			    </div>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+		    <a href="#" class="btn" data-dismiss="modal">Close</a>
+		    <!-- <a href="#" class="btn btn-primary">Save changes</a> -->
+		  </div>
+		</div>
+		<!-- End Modal -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="brand" href="#">IPA Learning Tool</a>
+					<ul class="nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#about" data-toggle="modal">About</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span3">
+				<div class="IPAConverter"></div>
+			</div>
+			<div class="span9">
+				<div class = "tabbable">
+					<ul class = "nav nav-tabs">
+					<li id = "NPCTab" class = "active"><a href = "#tab1" data-toggle="tab">Pulmonic Consanants</a></li>
+					<li id = "PCTab"><a href = "#tab2" data-toggle="tab">Non-Pulmonic Consanants</a></li>
+					<li id = "NounTab"><a href = "#tab3" data-toggle="tab">Vowels</a></li>
+					</ul>
+					<div class = "tab-content">
+						<div class = "tab-pane active" id="tab1">
+							<div class="IPAPulmonic"></div>
+							<h5 style = "text-align: center">Within each column, consanants on the right are voiced</h5>
+						</div>
+						<div class  = "tab-pane" id = "tab2">
+							<div class = "IPANonPulmonic"></div>
+						</div>
+						<div class = "tab-pane" id = "tab3">
+							<div class = "IPAVowels"></div>
+							<h5 style = "text-align: center">Where there is a "&#8226", the vowel to the right is rounded</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>			
+		<div class="row">
+			<div class="span12">
+				<div class="IPAQuiz"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
